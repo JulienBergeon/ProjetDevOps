@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/JulienBergeon/ProjetDevOps/compare/v1.0.0...v1.0.1) (2022-04-26)
+
+
+### Bug Fixes
+
+* versionning ([9a1ad0b](https://github.com/JulienBergeon/ProjetDevOps/commit/9a1ad0ba3b349c661eed409582c57b3280f20e37))
+
 ## 1.0.0 (2022-04-26)
 
 
