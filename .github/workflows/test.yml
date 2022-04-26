@@ -5,7 +5,11 @@ on: [push]
 jobs:
   laravel-tests:
     runs-on: ubuntu-latest
+    default:
+      run:
+        working-directory: dev-ops
     steps:
+      working-directory: 
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         run: vendor/bin/phpunit
  
