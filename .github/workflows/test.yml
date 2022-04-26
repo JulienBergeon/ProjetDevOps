@@ -11,7 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Execute tests (Unit and Feature tests) via PHPUnit
-        run: ls
-        # run: vendor/bin/phpunit
+        run: vendor/bin/phpunit
       
  
