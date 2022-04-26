@@ -10,6 +10,8 @@ jobs:
         working-directory: dev-ops
     steps:
       - uses: actions/checkout@v2
+      - name: upgrade composer
+        run: composer upgrade 
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         run: php artisan test
       
