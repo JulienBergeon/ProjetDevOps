@@ -9,7 +9,7 @@ jobs:
       run:
         working-directory: dev-ops
     steps:
-      working-directory: 
+      - uses: actions/checkout@v2
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         run: vendor/bin/phpunit
  
