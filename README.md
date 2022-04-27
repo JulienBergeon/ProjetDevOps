@@ -1,29 +1,6 @@
-## Projet DevOps 
-#### BERGEON Julien | CARRILLO Julien | CUHADAR Murat
-
-### First time setup 
-
-#### Copy .env file from example
-```shell
+Etapes lors d'un pull : 
 cp .env.example .env
-```
-
-#### Installing Composer Dependencies For Existing Applications
-```shell
-composer update
-```
-
-#### Generate Key
-```shell
+composer update 
 php artisan key:generate
-```
-
-#### Node
-```shell
 npm i 
-```
-
-#### Launch
-```shell
-php artisan serve
-```
+php artisan serve 
