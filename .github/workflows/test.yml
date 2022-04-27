@@ -20,15 +20,15 @@ jobs:
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
     #Testing database
-    - name: Migrate database
-      run: php artisan migrate 
+    # - name: Migrate database
+    #   run: php artisan migrate 
     #endtesting
     - name: Compile assets
       run: |
         npm install
         npm run production
-    - name: Execute tests (Unit and Feature tests) via PHPUnit
-      run: vendor/bin/phpunit
+    # - name: Execute tests (Unit and Feature tests) via PHPUnit
+    #   run: vendor/bin/phpunit
     - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
