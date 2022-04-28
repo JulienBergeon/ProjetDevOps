@@ -21,9 +21,14 @@ class AuthAuthTest extends TestCase
 
     public function test_users_can_authenticate_using_the_login_screen()
     {
+        $user = User::create([
+            'name' => 'Client',
+            'email' => 'client@client.com',
+            'password' => Hash::make('password'),
+        ]);
 
         $response = $this->post('/login', [
-            'email' => 'admin@admin.com',
+            'email' => 'client@client.com',
             'password' => 'password'
         ]);
       
@@ -37,17 +42,14 @@ class AuthAuthTest extends TestCase
     public function test_users_can_not_authenticate_with_invalid_password()
     {
         $user = User::create([
-            'name' => 'Client',
+            'name' => 'FakeClient',
             'email' => 'client@client.com',
-            'credit' => 1000,
             'password' => Hash::make('password'),
-            'is_admin' => FALSE
         ]);
 
         $this->post('/login', [
             'email' => $user->email,
             'password' => 'wrong-password',
-            'credit' =>  $user->credit 
         ]);
         $this->assertGuest();
     }
